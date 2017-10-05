@@ -97,18 +97,59 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+body {
+    background: #245782; 
+    background: -webkit-linear-gradient(to right, #ffff00, #34fe05); 
+    background: -moz-linear-gradient(to right, #ffff00, #34fe05); 
+    background: linear-gradient(to right, #ffff00, #34fe05);
+}
 
+h1 {
+    font-family: 'Alegreya', serif;
+    font-size: 3em;
+    color: #146a00;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+    text-align: left;
+    line-height: .9em;
+}
 
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    line-height: 1.2;
+    background-color: #ccc;
+    border-radius: .33em;
+    margin-top: 0px;
+    padding: 15px 15px 15px 15px;
+}  
 
+button {
+    margin-top: 5px;
+    margin-right: 5px;
+    padding: 5px;
+    color: #ccc;
+    background-color: #146a00;
+}
 
+button:hover {
+    color: #ffff00;
+}
 
+.container {
+    width: 67%;
+    max-width: 600px;
+    margin: 0 auto;
+}
 
-
-
-
-
-
-
+.author {
+    font-size: .75em;
+    font-style: italic;
+    color: #999;
+    display: block;
+    text-align: right;
+}
 
 
 

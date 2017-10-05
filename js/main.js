@@ -17,8 +17,9 @@ $(document).ready(function() {
 	// quote data is on different server than web app
 	var url = "https://cors-anywhere.herokuapp.com/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en";
 	$.getJSON(url, function(json) {
-	    quotation = json.quoteText + "\n" + "--" + json.quoteAuthor;
-		$(".quote").html(quotation);
+	    htmlQuotation = json.quoteText + '\n<br><span class="author">' + '--' + json.quoteAuthor + '</span>';
+	    quotation = json.quoteText + '\n' + '--' + json.quoteAuthor;
+		$(".quote").html(htmlQuotation);
 		}).fail(function( jqxhr, textStatus, error ) {
 	    		var err = textStatus + ", " + error;
 	    		$(".quote").html( "OOPS! unable to retrieve data due to error: " + err + ". Please try your request again later.");
@@ -28,8 +29,9 @@ $(document).ready(function() {
 	// setup event listner to retrieve a new quote when user clicks on the generate new quote button
 	$(".newquote").click(function() {
 		$.getJSON(url, function(json) {
-		    quotation = json.quoteText + "\n" + "--" + json.quoteAuthor;
-			$(".quote").html(quotation);
+		    htmlQuotation = json.quoteText + '\n<br><span class="author">' + '--' + json.quoteAuthor + '</span>';
+	    	quotation = json.quoteText + '\n' + '--' + json.quoteAuthor;
+			$(".quote").html(htmlQuotation);
 			}).fail(function( jqxhr, textStatus, error ) {
 		    		var err = textStatus + ", " + error;
 		    		$(".quote").html( "OOPS! unable to retrieve data due to error: " + err + ". Please try your request again later.");
